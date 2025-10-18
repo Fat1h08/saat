@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="u"class="y">
+    <style>
+.a{
+
+text-align: center;
+font-family: 'Times New Roman', Times, serif;}
+.e{
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 10px;
+font-weight: 200px;
+font-size :5rem;
+background-color: rgb(8, 219, 235);
+width: 300px;
+height: 100px;
+margin: auto;
+margin-top: 200px;
+border-radius: 15px;
+box-shadow: 0 0 20px 10px rgb(138, 5, 82);
+    
+}
+
+.b{
+ display:  flex;
+ align-items: center;
+ justify-content: center;
+margin: auto;
+border-radius:  10px;
+width: 200px;height: 50px;
+text-align: center;
+margin-top: 10px;
+font-weight: 100;
+font-size: 2rem;
+background-color: darkblue;
+   
+}
+.b:hover{
+
+    transition: transform 0.3s ease;
+    transform:scale(1.05);
+}
+.u{
+
+    background-color: rgb(255, 255, 255);
+}
+.u:hover{
+
+ transition: tranform 0.5s ease;
+    transform: perspective(0.5s);
+
+}
+.y{
+
+   background-color: rgb(0, 0, 0);
+
+}
+    </style>
+    
+
+    <div class="e"> 
+    
+    <p class="sa " id="saat"> </p>
+<script>
+   function updateTime(){
+   let a= new Date()
+   d=a.getDate();
+   b=a.getMinutes();
+   c=a.getHours();
+   y=a.getSeconds();
+   let saat = String(c).padStart(2,"0");
+     let dk = String(b).padStart(2,"0");
+       let sn = String(y).padStart(2,"0");
+    document.getElementById("saat").innerHTML=`${saat}:${dk}:${sn}`;}
+   
+    
+setInterval(updateTime, 1000);
+
+
+   
+</script>
+    </div>
+
+<button class ="b" onclick="gece()"> ☀️/🌑</button>
+
+
+</script>
+    <script>
+
+function gece(){
+    document.body.classList.toggle("y").innerHTML;
+
+
+
+
+    
+
+
+}
+
+    </script>
+ 
+</body>
+</html>
